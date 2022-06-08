@@ -1,15 +1,16 @@
+import renderHeader from './components/Header'
 import './style.css'
 
-const app =<HTMLDivElement>document.getElementById('app')
+
 const token = localStorage.getItem('token')
 
 if(token) {
-  //TODO renderizar componentes da pagina home
+  const app =<HTMLDivElement>document.getElementById('app')
+  renderHeader(app)
+  const welcomeTitle = <HTMLHeadingElement>document.createElement('h1')
+  welcomeTitle.id = 'welcome-title'
+  welcomeTitle.innerText= 'seja bem-vindo'
+  app.appendChild (welcomeTitle)
 } else{
   location.href = 'login.html'
 }
-
-
-
-
-export default{}
