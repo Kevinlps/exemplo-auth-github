@@ -9,7 +9,7 @@ if(token) {
   renderHeader(app)
   const welcomeTitle = <HTMLHeadingElement>document.createElement('h1')
   welcomeTitle.id = 'welcome-title'
-  welcomeTitle.innerText= 'seja bem-vindo'
+  welcomeTitle.innerText= 'Seja bem-vindo'
   app.appendChild (welcomeTitle)
 } else{
   location.href = 'login.html'
